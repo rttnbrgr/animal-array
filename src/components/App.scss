@@ -1,0 +1,50 @@
+/* Box Sizing */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+/* dumb reset 
+* { 
+  padding: 0;
+  margin: 0;
+}
+*/
+
+.App {
+  text-align: center;
+  /* flex stuff */
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: flex-start;
+}
+
+h2 {
+  text-transform: uppercase;
+  line-height: 1;
+  font-size: 2rem;
+  margin: 0 0 0.25rem 0;
+}
+
+span {
+  // font-size: .7
+}
+
+h3 {
+  color: red;
+  font-size: .75rem;
+  line-height: 1.5em;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1.675em;
+  margin-top: 0.5em;
+}
+
+.temp1 {
+  background-color: teal;
+  height: 4em;
+  display: block;
+}

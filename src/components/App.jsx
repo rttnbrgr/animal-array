@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import Profile from './Profile';
+import Profile from './Profile/Profile';
+import Header from './Header/Header';
 import data from '../data';
 import './App.css';
+import Typekit from 'react-typekit';
 
 class App extends Component {
 	
@@ -15,9 +17,16 @@ class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<h1>DEBUG</h1>
-				Active Pet: { this.state.activePet }
 				
+				<Header>
+					{/* 
+					<h1>DEBUG</h1>
+					Active Pet: { this.state.activePet }
+					<div className="temp1"></div>
+					 */}
+					<h1>animalArray</h1>
+				</Header>
+
 				{ data.map((x,i) => (
 					<Profile
 						key={i}
@@ -27,19 +36,24 @@ class App extends Component {
 						onClose={this.setActivePet.bind(this, null)}
 						/>
 				))}
+				
+				<Typekit kitId="vcz4wqp" />
 			</div>
 		);
 	}
 
+	// setActivePet = profileIndex => {
 	setActivePet(profileIndex) {
 		console.log('setActivePet');
 		console.log(profileIndex)
-		// this.setState((prev, props) => {
-		// 	activePet: profileIndex
-		// })
-		this.setState({
-			activePet: profileIndex
-		})
+		this.setState((prev, props) => ({
+			activePet: profileIndex === prev.activePet ? null : profileIndex
+		}));
+	}
+
+	flip(node) {
+		const first = node.getBoundingClientRect();
+		// const last = node.
 	}
 	
 }

@@ -1,6 +1,5 @@
 $profile-bg: #fafafa;
 $profile-bg--active: white;
-$grey-light: #fafafa;
 $transition: all 3s ease;
 
 .profile {
@@ -10,9 +9,12 @@ $transition: all 3s ease;
     background-color: $profile-bg;
     border-radius: 4px;
     position: relative;
+    // flex
     display: flex;
     flex-direction: column;
     align-items: center;
+    // block
+    display: block;
   
     /* Active Profile */
     &.active {
@@ -36,7 +38,6 @@ $transition: all 3s ease;
         font-size: 1em;
         line-height: 1;
         width: 3em;
-        // height: 2em;
         position: fixed;
         top: 0;
         right: 0;
@@ -58,33 +59,40 @@ $transition: all 3s ease;
     /* Photo */
     &__hero {
         border-radius: 50%;
-        width: 250px;
-        height: 250px;
+        width: 15.625rem; // 250px;
+        height: 15.625rem; // 250px;
         transition: all .3s ease;
         transition: $transition;
-        display: flex;
         margin-bottom: 0;
         object-fit: cover; 
         filter: grayscale(100%);
+        //
+        display: flex;
+        // 
+        display: block;
+        margin: 0 auto;
+        // background-size: contain;
+        background-size: cover;
 
         .active & {
             width: 100%;
             height: 50vh;
             border-radius: 0;
+            filter: grayscale(0%);
+            // can't figure this out yet
+            // background-size: contain;
+            // background-attachment: fixed;
         }
     }
 
     /* HEADLINE */ 
     &__header {  
-        // background-color: green;
         margin-top: 1rem;
         flex: 1 1 auto;
         transition: all .3s ease;    
         transition: $transition;    
-        // background-color: red;
-        .active & {
-            // justify-content: flex-start;
-        }
+
+        .active & {}
     }
     // not in use
     &__header-inner {
@@ -108,12 +116,15 @@ $transition: all 3s ease;
         
         .active & {
             display: block;
-            // min-height: 100px;
         }
     }
 
 }
 
+
+.profile.active {
+
+}
 
 
 // debug

@@ -34,12 +34,16 @@ class Profile extends Component {
 				<a className="profile__close" onClick={onClose}>X</a>
 				
 				{/* HERO */}
-				<img
+				<div 
+					className="profile__hero"
+					style={{ backgroundImage: `url(${avatar})` }}
+					></div>
+				{/* <img
 					// onClick={()=>{console.log('click hero');}}
 					src={avatar}
 					alt={name}
 					className="profile__avatar profile__hero"
-					/>
+					/> */}
 
 				{/* Profile Header */}
 				<div className="profile__header">

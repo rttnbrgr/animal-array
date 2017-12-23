@@ -1,6 +1,24 @@
+$icon-size: 1.5rem; // 24px
 header {
-    background-color: blue;
-    color: pink;
-    padding: 1em 0;
-    h1 { margin: 0; }
+    background-color: grey;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-content: flex-end;
+    
+    h1 {
+        margin: 0; 
+        color: black;
+    }
+
+    span.svg {
+        height: $icon-size;
+        flex: 0 0 $icon-size;
+        align-self: flex-end;
+        align-self: center;
+        // svg {
+        //     fill: green;
+        // }
+    }
 }

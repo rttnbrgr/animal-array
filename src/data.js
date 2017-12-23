@@ -47,7 +47,8 @@ const petData = [
 	},
 	{
 		name: "Booger",
-		avatar: 'booger-1.jpg',
+		// avatar: 'booger-1.jpg',
+		avatar: 'http://unsplash.it/500',
 		info: {
 			alias: "Young Booger Da Gawd, Boogzy Collins, Booger T. Flossington",
 			breed: "Domestic Shorthair",
@@ -61,7 +62,8 @@ const petData = [
 	},
 	{
 		name: "Manny",
-		avatar: 'booger-1.jpg',
+		// avatar: 'booger-1.jpg',
+		avatar: 'http://unsplash.it/600',
 		info: {
 			alias: "Young Booger Da Gawd, Boogzy Collins, Booger T. Flossington",
 			breed: "Domestic Shorthair",

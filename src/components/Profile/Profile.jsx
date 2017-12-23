@@ -1,55 +1,59 @@
 import React, { Component } from 'react';
 import * as classNames from 'classnames';
 import './Profile.css';
-import {ProfileHeader, ProfileInfo} from './ProfileBits'
+import propTypes from 'prop-types'
 
+// Profile Info Block
+const ProfileInfo = props => (
+	<div className="profile__info">
+		{Object.keys(props.info).map((x, i) => ([
+			<h3 key="1">{x}</h3>,
+			<p key="2">{props.info[x]}</p>
+		]))}
+	</div>
+);
+
+ProfileInfo.protoTypes = {
+	info: propTypes.object.isRequired
+}
+
+// Profile
 class Profile extends Component {
 	
 	render() {
-		let { profile, 
-			onSelect,
-			onClose,
-			active
-		} = this.props;
-		console.log(`${profile.name} is active? ${active}`);
+
+		let { profile, onSelect, onClose, active } = this.props;
+		let { name, avatar, info } = profile
 		let profileClasses = classNames('profile', { 'active': active })
+		const ageString = `${profile.info.age} years old`;
 
 		return (
-			<div className={profileClasses} 
-				// onClick={ active ? null : onClose }
-				onClick={ active ? null : onSelect }
-				>
+			<div className={profileClasses}  onClick={ active ? null : onSelect } >
 				
 				{/* CLOSE */}
 				<a className="profile__close" onClick={onClose}>X</a>
 				
 				{/* HERO */}
 				<img
-					onClick={()=>{console.log('click hero');}}
-					src={profile.avatar}
-					alt={profile.name}
+					// onClick={()=>{console.log('click hero');}}
+					src={avatar}
+					alt={name}
 					className="profile__avatar profile__hero"
 					/>
 
-				<ProfileHeader name={profile.name} age={profile.info.age} />
+				{/* Profile Header */}
+				<div className="profile__header">
+					<h1>{name}</h1>
+					<h3>{ageString}</h3>
+				</div>
+
+				{/* Profile Info */}
 				<ProfileInfo info={profile.info} />				
 
 			</div>
 		)
 	}
+
 }
 
 export default Profile;
-
-// const ProfileHeader = props => {
-// 	let ageString = `${props.age} years old`; 
-// 	return (
-		
-// 		<div className="profile__header">
-// 			<div className="profile__header-inner">
-// 				<h2>{props.name}</h2>
-// 				<span>{`${props.age} years old`}</span>
-// 			</div>
-// 		</div>
-// 	)
-// }

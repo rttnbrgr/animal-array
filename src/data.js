@@ -1,6 +1,8 @@
-import puffyAvatar from './assets/puffy-1.jpg';
-import sashaAvatar from './assets/sasha-1.jpeg'
-const pimientaAvatar = require('./assets/pimienta-1.jpg');
+import puffyAvatar from './assets/puffy.jpg';
+import sashaAvatar from './assets/sasha.jpg';
+import pimientaAvatar from './assets/pimienta.jpg';
+import mannyAvatar from './assets/manny.jpg';
+import boogerAvatar from './assets/booger.jpg';
 
 const petData = [
 	{
@@ -47,8 +49,7 @@ const petData = [
 	},
 	{
 		name: "Booger",
-		// avatar: 'booger-1.jpg',
-		avatar: 'http://unsplash.it/500',
+		avatar: boogerAvatar,
 		info: {
 			alias: "Young Booger Da Gawd, Boogzy Collins, Booger T. Flossington",
 			breed: "Domestic Shorthair",
@@ -62,17 +63,16 @@ const petData = [
 	},
 	{
 		name: "Manny",
-		// avatar: 'booger-1.jpg',
-		avatar: 'http://unsplash.it/600',
+		avatar: mannyAvatar,
 		info: {
-			alias: "Young Booger Da Gawd, Boogzy Collins, Booger T. Flossington",
-			breed: "Domestic Shorthair",
-			age: 8,
-			dob: "unknown",
+			alias: "Manny bein' manny",
+			breed: "Pug",
+			age: 6,
+			dob: "?/?/?",
 			sex: "Male, neutered",
-			coat: "Very soft cream and white coat with a faintly striped tail, neuter tattoo on belly and inner pinnae",
-			build: "Lean and beefy",
-			bio: "Booger was found on the hard streets of Lafayette, IN where he ruled his domain with an iron paw.Booger does not tolerate any other cat stepping on his territory.Even now, in his retirement home of Tigard, OR, he is known to get into a tussle whenever some young buck comes around trying to encroach.He has developed a healthy bromance with his new human Lucas, brother to his previous owner, Nathan.The love is big and strong.He also has a new canine friend named Manny, who, despite continual invasion of personal space, has proven to be a non - threat.Booger is living the life now that he has a cat door with unlimited access to the outdoors.He comes and goes as he pleases, often coming in only to eat or visit with his bro Lucas."
+			coat: "Luxurious AF",
+			build: "Write something here",
+			bio: "Manny's bio here"
 		}
 	}
 ];

@@ -10,46 +10,19 @@ html { box-sizing: border-box; }
 */
 
 $proxima: "proxima-nova", 'helvetica', sans-serif;
+$grey-light: #fafafa;
 
-.App {
+.app {
   text-align: center;
-  /* flex stuff */
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: flex-start;
+  
+  // prevent scroll?
+  &.active {
+    overflow: hidden;
+    height: 100vh;
+  }
 }
 
-h2 {
-  text-transform: uppercase;
-  line-height: 1;
-  font-size: 2rem;
-  margin: 0 0 0.25rem 0;
-}
-
-span {
-  // font-size: .7
-}
-
-h3 {
-  color: red;
-  font-size: .75rem;
-  line-height: 1.5em;
-  text-transform: uppercase;
-  margin-bottom: 0;
-}
-
-p {
-  font-size: 1rem;
-  margin-bottom: 1.675em;
-  margin-top: 0.5em;
-}
-
-.temp1 {
-  background-color: teal;
-  height: 4em;
-  display: block;
-}
+/* Typography */
 
 h1 {
   font-family: $proxima;
@@ -61,14 +34,22 @@ h1 {
 }
 
 h3 {
+  margin: 0;
   font-family: $proxima;
   font-weight: 700;
   font-size: 0.75rem;
   line-height: 1.3333;
-  margin: 0;
+  text-transform: uppercase;
   color: black;
 }
 
+p {
+  font-size: 1rem;
+  margin-bottom: 1.675em;
+  margin-top: 0.5em;
+  font-family: monospace;
+  line-height: 1.25rem;
+}
 
 .debug {
   h1 { background-color:white }

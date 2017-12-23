@@ -49,14 +49,15 @@ class App extends Component {
 				console.log('hi');
 				// style before!
 				// node.style.transform = `translate(${deltaX}px, ${deltaY}px)`;
-				node.style.transform = `translate(0px, ${deltaY}px)`;
-				node.style.transition = `transform 0s, all 0s`;
+				
+				// node.style.transform = `translate(0px, ${deltaY}px)`;
+				// node.style.transition = `transform 0s, all 0s`;
 				// styles after
 				requestAnimationFrame(() => {
 					console.log('hi again');
-					node.style.transform = ``;
+					// node.style.transform = ``;
 					// node.style.transition = `transform 3s, all 3s`;
-					node.style.transition = `transform 300ms, all 300ms`;
+					// node.style.transition = `transform 300ms, all 300ms`;
 				});
 			});
 
@@ -66,7 +67,8 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
+			// <div className={`app ${this.state.activePet !== null ? 'active' : ''}`}>
+			<div className="app">
 				
 				<Header/>
 

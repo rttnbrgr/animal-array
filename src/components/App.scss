@@ -9,6 +9,8 @@ html { box-sizing: border-box; }
 }
 */
 
+$proxima: "proxima-nova", 'helvetica', sans-serif;
+
 .App {
   text-align: center;
   /* flex stuff */
@@ -47,4 +49,28 @@ p {
   background-color: teal;
   height: 4em;
   display: block;
+}
+
+h1 {
+  font-family: $proxima;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0 0 .5rem;
+  color: grey;
+}
+
+h3 {
+  font-family: $proxima;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.3333;
+  margin: 0;
+  color: black;
+}
+
+
+.debug {
+  h1 { background-color:white }
+  h3 { background-color:green }
 }
